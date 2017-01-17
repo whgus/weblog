@@ -81,6 +81,7 @@ abstract class AppBase{//계승을 전제로 하는 클래스로 abstract클래�
       $action = $parameters['action'];
       $this->getContent($controller,$action,$parameters);
     } catch (FileNotFoundException $e) {
+        echo "djqt";
         $this->disErrorPage($e);
     } catch(AuthorizedException $e){
         list($controller,$action) = $this->_signinAction;

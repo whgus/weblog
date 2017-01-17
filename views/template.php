@@ -32,10 +32,17 @@
             </div>
         </div>
     </nav>
-    <ol class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Library</a></li>
-        <li class="active">Data</li>
+
+    <ol class="breadcrumb",position="fixed" >
+        <li><a href="<?php print $base_url; ?>/">Home</a></li>
+        <li><a href="<?php print $base_url; ?>/item?cate=man">Man's Clothing</a></li>
+        <li><a href="<?php print $base_url; ?>/item?cate=woman">Woman's Clothing</a></li>
+        <li><a href="<?php print $base_url; ?>/item?cate=scarf">Scarf</a></li>
+        <li><a href="<?php print $base_url; ?>/item?cate=wallet">Wallet</a></li>
+        <li><a href="<?php print $base_url; ?>/item?cate=perfume">Perfume</a></li>
+        <li><a href="<?php print $base_url; ?>/item?cate=shoes">Shoes</a></li>
+        <li><a href="<?php print $base_url; ?>/item?cate=free">FreeBoard</a></li>
+        <li class="active">개인 정보</li>
         <?php if ($session->isAuthenticated()): ?>
             <li>
                 <a href="<?php print $base_url; ?>/">
@@ -44,7 +51,7 @@
             </li>
             <li>
                 <a href="<?php print $base_url; ?>/account">
-                    계정
+                    계정 정보
                 </a>
             </li>
         <?php else: ?>

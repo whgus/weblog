@@ -45,8 +45,12 @@ class BlogApp extends AppBase {
       '/'                           => array('controller' => 'blog', 'action' => 'index'),
       '/status/post'                => array('controller' => 'blog', 'action' => 'post'),
       '/user/:user_name'            => array('controller' => 'blog', 'action' => 'user'),
-      '/user/:user_name/status/:id' => array('controller' => 'blog', 'action' => 'specific')
+      '/user/:user_name/status/:id' => array('controller' => 'blog', 'action' => 'specific'),
 
+      //ItemController 클래스 관련 Routing
+      '/item'                       => array('controller' => 'item', 'action' => 'index'),
+//      '/item/:user_name'            => array('controller' => 'blog', 'action' => 'user'),
+//      '/user/:user_name/status/:id' => array('controller' => 'blog', 'action' => 'specific'),
     );
 
   }//getRouteDefinition - function
