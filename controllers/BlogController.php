@@ -59,7 +59,7 @@ class BlogController extends Controller{
   }
 
   public function userAction($par){
-    $user = $this->_connect_model->get('User')->getUserRecord($par['user_name']);
+    $user = $this->_connect_model->get('User')->getUserRecord($par['user_id']);
     if(!$user){
       $this->httpNotFound();
     }
@@ -81,7 +81,7 @@ class BlogController extends Controller{
     return $user_view;
   }
   public function specificAction($par){
-    $dat = $this->_connect_model->get('Status')->getSpecificMessage($par['id'],$par['user_name']);
+    $dat = $this->_connect_model->get('Status')->getSpecificMessage($par['id'],$par['user_id']);
 
     if(!$dat){
       $this->httpNotFound();

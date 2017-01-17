@@ -10,7 +10,7 @@
         <?php print $this->render('errors', array('errors' => $errors)); ?>
     <?php endif; ?>
     <!-- /views/account/inputs.php를 Rendering -->
-    <?php print $this->render('account/inputs', array('user_name' => $user_name, 'password' => $password,)); ?>
+    <?php print $this->render('account/inputs', array('user_id' => $user_id, 'user_pass' => $user_pass,)); ?>
 
 
     <input type="submit" class="btn btn-default" value="로그인"></input>

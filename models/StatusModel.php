@@ -14,7 +14,7 @@ class StatusModel extends ExecuteModel {
   }
   // *** getUserData()***
   public function getUserData($user_id){
-    $sql = "SELECT a.*, u.user_name
+    $sql = "SELECT a.*, u.user_id
               FROM status a LEFT JOIN user u ON a.user_id = u.id
                   LEFT JOIN followingUser f ON f.following_id = a.user_id
                      AND f.user_id =:user_id  
@@ -26,7 +26,7 @@ class StatusModel extends ExecuteModel {
 
   // *** getPostedMessage()***
   public function getPostedMessage($user_id) {
-    $sql = "SELECT a.*,u.user_name
+    $sql = "SELECT a.*,u.user_id
             FROM status a LEFT JOIN user u ON a.user_id = u.id
             WHERE u.id = :user_id
             ORDER BY a.time_stamp DESC";
@@ -36,12 +36,12 @@ class StatusModel extends ExecuteModel {
    }
 
    /// ***getSpecificMessage()***
-   public function getSpecificMessage($id,$user_name) {
-     $sql = "SELECT a.*,u.user_name
+   public function getSpecificMessage($id,$user_id) {
+     $sql = "SELECT a.*,u.user_id
              FROM status a LEFT JOIN user u ON u.id = a.user_id
-             WHERE a.id = :id AND u.user_name = :user_name";
+             WHERE a.id = :id AND u.user_id = :user_id";
      $specMsg = $this->getRecord($sql,
-                array(':id'=> $id,':user_name'=> $user_name));
+                array(':id'=> $id,':user_id'=> $user_id));
       return $specMsg;    
    }
 }

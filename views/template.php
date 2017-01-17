@@ -5,7 +5,7 @@
     <!-- 각 action에 따른 views폴더내의 view파일들에서 설정하여 보내줌-->
     <title>
         <?php if (isset($title)): print $this->escape($this).'-'; endif; ?>
-        Weblog
+        WebShop
     </title>
     <!-- { endfor; endwhile; endswitch; endforeach;} -->
     <link href="/css/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">

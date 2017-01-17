@@ -111,8 +111,8 @@
         array_shift($tokens);
         //http://php.net/manual/kr/function.array-shift.php
       }
-      $password =session_id().$form;
-      $token = password_hash($password, PASSWORD_DEFAULT);
+      $user_pass =session_id().$form;
+      $token = password_hash($user_pass, PASSWORD_DEFAULT);
       //http://php.net/manual/kr/function.password-hash.php
       //password_hash()으로 생성한 패스워드 hash정보를 $tokens에 저장
       //$tokens[]=$token;

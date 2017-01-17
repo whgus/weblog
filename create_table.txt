@@ -7,6 +7,21 @@ CREATE TABLE user(
   UNIQUE KEY user_name_index(user_name)
 ) ENGINE = INNODB;
 
+CREATE TABLE `userinfo` (
+  `user_id` char(30) NOT NULL,
+  `user_pass` char(35) DEFAULT NULL,
+  `user_nick` char(30) DEFAULT NULL,
+  `user_add` char(150) DEFAULT NULL,
+  `user_hp` char(20) DEFAULT NULL,
+  `user_delivery` char(150) DEFAULT NULL,
+  `user_point` int(11) NOT NULL,
+  `user_level` int(11) NOT NULL,
+  `user_email` char(100) DEFAULT NULL,
+  `user_buy` varchar(15) DEFAULT NULL,
+  `user_wishList` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+)
+
 CREATE TABLE status(
   id INTEGER AUTO_INCREMENT,
   user_id INTEGER NOT NULL,

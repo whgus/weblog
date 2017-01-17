@@ -7,8 +7,8 @@
    </h2>
    <p>
      사용자 ID:
-      <a href="<?php print $base_url; ?>/user/<?php print $this->escape($user['user_name']); ?>">
-        <?php print $this->escape($user['user_name']); ?>
+      <a href="<?php print $base_url; ?>/user/<?php print $this->escape($user['user_id']); ?>">
+        <?php print $this->escape($user['user_id']); ?>
       </a>
    </p>
    <ul>
@@ -23,8 +23,8 @@
      <ul>
        <?php foreach ($followingUsers as $f_user): ?>
        <li>
-         <a href="<?php print $base_url; ?>/user/<?php print $this->escape($f_user['user_name']); ?>">
-             <?php print $this->escape($f_user['user_name']); ?>
+         <a href="<?php print $base_url; ?>/user/<?php print $this->escape($f_user['user_id']); ?>">
+             <?php print $this->escape($f_user['user_id']); ?>
          </a>
        </li>
      <?php endforeach; ?>

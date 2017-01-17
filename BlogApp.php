@@ -7,7 +7,7 @@ class BlogApp extends AppBase {
   protected function doDbConnection() {
     $this->_connectModel->connect('master', //접속이름
     array(
-      'string'    => 'mysql:dbname=weblog;host=localhost;charset=utf8',  //DB이름 - weblog
+      'string'    => 'mysql:dbname=webshop;host=localhost;charset=utf8',  //DB이름 - weblog
       'user'      => 'root',                                            //DB사용자명
       'password'  => '1234',                                             //DB사용자의 패스워드
     ));
@@ -44,8 +44,8 @@ class BlogApp extends AppBase {
       //BlogController 클래스 관련 Routing
       '/'                           => array('controller' => 'blog', 'action' => 'index'),
       '/status/post'                => array('controller' => 'blog', 'action' => 'post'),
-      '/user/:user_name'            => array('controller' => 'blog', 'action' => 'user'),
-      '/user/:user_name/status/:id' => array('controller' => 'blog', 'action' => 'specific'),
+      '/user/:user_id'            => array('controller' => 'blog', 'action' => 'user'),
+      '/user/:user_id/status/:id' => array('controller' => 'blog', 'action' => 'specific'),
 
       //ItemController 클래스 관련 Routing
       '/item'                       => array('controller' => 'item', 'action' => 'index'),
