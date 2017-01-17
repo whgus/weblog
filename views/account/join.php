@@ -8,3 +8,5 @@
     <input type="password" class="form-control" name="user_pass" placeholder="Password"
            value="<?php echo $this->escape($user_pass); ?>" />
 </div>
+
+<!-- 아이디 비밀번호, 비밀번호 확인, 닉네임, 주소, 배송지, 휴대폰, 이메일 -->
