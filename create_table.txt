@@ -64,5 +64,5 @@ CREATE TABLE `product` (
   `file_copied_2` char(30) DEFAULT NULL,
   `file_copied_3` char(30) DEFAULT NULL,
   `file_copied_4` char(30) DEFAULT NULL,
-  PRIMARY KEY (`num`);
+  PRIMARY KEY (`num`);;;;;;;
 );
